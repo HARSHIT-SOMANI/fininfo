@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>hi</p>
+    <form action="/showdb" method="post">
+        {% csrf_token %}
+     <input type="text" placeholder="name" name="name">
+     <input type="date" placeholder="dob" name="dob">
+     <input type="email" placeholder="email" name="email">
+     <input type="number" placeholder="phone no" name="number">
+     <input type="radio" name="gender">male
+     <input type="radio" name="gender">female
+     <input type="text" placeholder="flat no" name="flat">
+     <input type="text" placeholder="street" name="street">
+     <select name="country">
+        <option value="">select country</option>
+         <option value="india">india</option>
+         <option value="usa">usa</option>
+         <option value="africa">africa</option>
+         <option value="china">china</option>
+     </select>
+     
+     <!-- <input type="text" placeholder="country"> -->
+     <input type="file" placeholder="upload image">
+     <button type="submit">submit</button>
+    </form>
+</body>
+</html>
