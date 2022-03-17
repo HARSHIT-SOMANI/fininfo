@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button><a href="http://127.0.0.1:8000/">enter other user name</a></button>
+    <table style="width:100%" id="mytable" class="content-table" > 
+        <thead> 
+        <tr>
+          <th style="width:auto; font-weight: bold;">Name</th>
+          <th style="width:auto; font-weight: bold;">DOB</th>
+          <th style="width:auto; font-weight: bold;">Email</th>
+          <th style="width:auto; font-weight: bold;">Phone</th>
+          <th style="width:auto; font-weight: bold;">Gender</th>
+          <th style="width:auto; font-weight: bold;">Flat</th>
+          <th style="width:auto; font-weight: bold;">Street</th>
+          <th style="width:auto; font-weight: bold;">Image</th>
+        </tr>
+        </thead>
+        <tbody>
+            {%for user in userdetails%}
+            <tr>
+           <td> {{user.name}}</td>
+           <td> {{user.dob}}</td>
+          <td>  {{user.email}}</td>
+           <td> {{user.phone}}</td>
+           <td> {{user.gender}}</td>
+           <td> {{user.flat}}</td>
+           <td> {{user.street}}</td>
+           <td> {{user.country}} </td>
+           <td><img src="{{user.image}}" style="height: 200px; width: 200px;"> 
+               </td>
+            </tr>
+            {%endfor%}
+        </tbody> 
+      </table>
+
+</body>
+</html>

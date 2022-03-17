@@ -16,17 +16,17 @@
             }        
             body{
                 font-family: Space Grotesk;
-                background-color: #1E1F31;
+                background-color: white;
                 overflow-x: hidden;
             }
-            .form{
+    .form{
     position: absolute;
     top:50%;
-    left: 50%;
+    left: 30%;
     margin-right: -50%;
     transform: translate(-50%,-50%);
     /*above code is to keep the form at the center of page */
-    background-color:rgb(184, 180, 180) ;
+    background-color:white ;
     width: 400px;
     border-radius: 8px;
     padding: 20px 40px;
@@ -45,12 +45,23 @@
     margin-bottom: 17px;
   }
   .input {
-    border-radius: 20px;
+    position: relative;
+    left: 0%;
     font-size: medium;
     height: 100%;
     width: 80%;
     border: 1px solid #DADCE0;
   }
+  *{
+                margin: 0;
+                outline: none;
+                box-sizing: border-box;
+            }        
+            body{
+                font-family: Space Grotesk;
+                background-color: #1E1F31;
+                overflow-x: hidden;
+            }
     </style>
 </head>
 <body>
@@ -62,9 +73,9 @@
     <div class="inputcontainer"><input type="date" placeholder="dob" name="dob" class="input" required></div>
     <div class="inputcontainer"><input type="email" placeholder="email" name="email" class="input" required></div>
     <div class="inputcontainer"><input type="number" placeholder="phone no" name="number" class="input" required></div>
-    <div class="inputcontainer">
-    <input type="radio" name="gender"  required>male
-    <input type="radio" name="gender"  required>female
+    <div class="inputcontainer">gender:
+    <input type="radio" name="gender" value="male" required>male
+    <input type="radio" name="gender" value="female" required>female
     </div>
     <div class="inputcontainer"><input type="text" placeholder="flat no" name="flat" class="input" required></div>
     <div class="inputcontainer"><input type="text" placeholder="street" name="street" class="input" required></div>
@@ -76,7 +87,7 @@
          <option value="china">china</option>
      </select></div>
      <!-- <input type="text" placeholder="country"> -->
-     <div class="inputcontainer"><input type="file" name="image" accept="image/*" required></div>
+     <div class="inputcontainer">Upload Photo<input type="file" name="image" accept="image/*" required></div>
      <button type="submit">submit</button>
     </div>
 </body>

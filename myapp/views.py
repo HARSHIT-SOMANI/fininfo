@@ -33,3 +33,7 @@ def showdb(request):
         'image':last.image
     }
     return render(request,'db.html',context)
+
+def showdb2(request):
+    userdetails=details.objects.all()
+    return render(request,'db2.html',{'userdetails':userdetails})
