@@ -8,7 +8,7 @@
 </head>
 <body>
     <p>hi</p>
-    <form action="/showdb" method="post">
+    <form action="/showdb" method="post" enctype="multipart/form-data">
         {% csrf_token %}
      <input type="text" placeholder="name" name="name">
      <input type="date" placeholder="dob" name="dob">
@@ -27,7 +27,7 @@
      </select>
      
      <!-- <input type="text" placeholder="country"> -->
-     <input type="file" placeholder="upload image">
+     <input type="file" name="image">
      <button type="submit">submit</button>
     </form>
 </body>

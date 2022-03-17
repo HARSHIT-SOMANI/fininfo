@@ -17,8 +17,9 @@ def showdb(request):
         myuser.country=request.POST['country']
         myuser.number=request.POST['number']
         myuser.gender=request.POST['gender']
+        if len(request.FILES)!=0:
+            myuser.image=request.FILES['image']
         myuser.save()
-    print('the detils re tken')
     last=details.objects.last()
     context={
         'name':last.name,
@@ -28,6 +29,7 @@ def showdb(request):
         'gender':last.gender,
         'flat':last.flat,
         'street':last.street,
-        'country':last.country
+        'country':last.country,
+        'image':last.image
     }
     return render(request,'db.html',context)
