@@ -38,6 +38,19 @@
     height: 100vh;
     overflow: hidden;
 }
+.inputcontainer {
+    position: relative;
+    height: 45px;
+    width: 90%;
+    margin-bottom: 17px;
+  }
+  .input {
+    border-radius: 20px;
+    font-size: medium;
+    height: 100%;
+    width: 80%;
+    border: 1px solid #DADCE0;
+  }
     </style>
 </head>
 <body>
@@ -49,8 +62,10 @@
     <div class="inputcontainer"><input type="date" placeholder="dob" name="dob" class="input" required></div>
     <div class="inputcontainer"><input type="email" placeholder="email" name="email" class="input" required></div>
     <div class="inputcontainer"><input type="number" placeholder="phone no" name="number" class="input" required></div>
-    <div class="inputcontainer"><input type="radio" name="gender" class="input" required>male
-    <input type="radio" name="gender" required>female</div>
+    <div class="inputcontainer">
+    <input type="radio" name="gender"  required>male
+    <input type="radio" name="gender"  required>female
+    </div>
     <div class="inputcontainer"><input type="text" placeholder="flat no" name="flat" class="input" required></div>
     <div class="inputcontainer"><input type="text" placeholder="street" name="street" class="input" required></div>
     <div class="inputcontainer"><select name="country" class="input" required>
