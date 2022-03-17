@@ -14,8 +14,8 @@
      <input type="date" placeholder="dob" name="dob" required>
      <input type="email" placeholder="email" name="email" required>
      <input type="number" placeholder="phone no" name="number" required>
-     <input type="radio" name="gender">male
-     <input type="radio" name="gender">female
+     <input type="radio" name="gender" required>male
+     <input type="radio" name="gender" required>female
      <input type="text" placeholder="flat no" name="flat" required>
      <input type="text" placeholder="street" name="street" required>
      <select name="country" required>
@@ -27,7 +27,7 @@
      </select>
      
      <!-- <input type="text" placeholder="country"> -->
-     <input type="file" name="image" required>
+     <input type="file" name="image" accept="image/*" required>
      <button type="submit">submit</button>
     </form>
 </body>
